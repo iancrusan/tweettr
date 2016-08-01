@@ -14,9 +14,12 @@
     </div>
   </div>
   <div class="col-xs-6">
+    <%= render '/components/post_form' %>
     <div class="panel panel-default">
+      <% for @p in @posts%>
       <div class="panel-body">
-        <p>Tweets</p>
+        <p><%= @p.content %></p>
+        <% end %>
       </div>
     </div>
   </div>
